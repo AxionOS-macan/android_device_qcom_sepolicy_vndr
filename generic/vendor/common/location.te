@@ -38,6 +38,7 @@ allow vendor_location self:capability { setgid setuid };
 
 # execute permission for vendor_location daemons in /vendor/bin/
 allow vendor_location vendor_location_exec:file rx_file_perms;
+domain_auto_trans(vendor_location, vendor_location_xtra_daemon_exec, vendor_location_xtra_daemon)
 
 # /data/vendor/vendor_location
 allow vendor_location vendor_location_data_file:dir create_dir_perms;
