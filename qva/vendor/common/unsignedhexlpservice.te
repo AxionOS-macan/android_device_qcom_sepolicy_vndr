@@ -56,6 +56,6 @@ hal_client_domain(vendor_unsignedhexlpservice, vendor_hal_dspmanager);
 hal_client_domain(vendor_unsignedhexlpservice, hal_graphics_allocator);
 
 # Do not audit following denials as they are expected.
+dontaudit system_server vendor_hal_unsignedhexlp_service:service_manager find;
 dontaudit vendor_unsignedhexlpservice vendor_xdsp_device:chr_file { getattr open read map };
 dontaudit vendor_unsignedhexlpservice vendor_qdsp_device:chr_file {open};
-
